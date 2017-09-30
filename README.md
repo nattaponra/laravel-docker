@@ -27,7 +27,6 @@ DB_PASSWORD=my_password
 ```
 ## 3.Update library of laravel project.
 ```bash
-# cd app
 # composer update
 ```
 
