@@ -8,7 +8,7 @@ git clone https://github.com/nattaponra/laravel-docker.git
 ## 2.Install Laravel with composer
 ```bash
 # cd laravel-docker
-# composer create-project --prefer-dist laravel/laravel blog
+# composer create-project --prefer-dist laravel/laravel app
 ```
 
 ## 3. Rename .env and config database
