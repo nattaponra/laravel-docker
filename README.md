@@ -13,6 +13,7 @@ git clone https://github.com/nattaponra/laravel-docker.git
 ## 2.Update library the laravel project.
 ```bash
 # cd laravel-docker
+# cd app
 # composer update
 ```
 
