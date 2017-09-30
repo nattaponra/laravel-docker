@@ -11,10 +11,12 @@ git clone https://github.com/nattaponra/laravel-docker.git
 # composer create-project --prefer-dist laravel/laravel blog
 ```
 
-## 3. Rename and config database
-
-* laravel-docker/app/.env.example to laravel-docker/app/.env
-* setting database follow below example.
+## 3. Rename .env and config database
+```
+# cd app
+```
+* rename env.example to .env
+* change database setting follow below example.
 ```
 DB_CONNECTION=mysql
 DB_HOST=mysql

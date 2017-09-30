@@ -2,7 +2,7 @@ version: '2'
 
 services:
     web:
-        image: 3dsinteractive/nginx:1.12
+        image: nginx:1.12
         depends_on:
             - phpfpm
             - mysql
@@ -15,14 +15,14 @@ services:
             - ./dockers/web/nginx:/bitnami/nginx
             - ./dockers/certs:/bitnami/nginx/conf/bitnami/certs
     phpfpm:
-        image: 3dsinteractive/php-fpm:7.1
+        image: php-fpm:7.1
         depends_on:
             - mysql
         volumes:
             - ./app:/app
             - ./dockers/phpfpm:/bitnami/php-fpm
     mysql:
-        image: 3dsinteractive/mysql:5.7.19
+        image: mysql:5.7.19
         environment:
             - ALLOW_EMPTY_PASSWORD=yes
             - MYSQL_USER=my_user
@@ -36,7 +36,7 @@ services:
             - MYSQL_USERNAME=my_user
             - PMA_HOST=mysql
         ports:
-            - 8888:80
+            - 5555:80
     tool:
         build: dockers/tool
         tty: true
