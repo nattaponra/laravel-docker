@@ -15,14 +15,14 @@ services:
             - ./dockers/web/nginx:/bitnami/nginx
             - ./dockers/certs:/bitnami/nginx/conf/bitnami/certs
     phpfpm:
-        image: php-fpm:7.1
+        image: bitnami/php-fpm:7.1
         depends_on:
             - mysql
         volumes:
             - ./app:/app
             - ./dockers/phpfpm:/bitnami/php-fpm
     mysql:
-        image: mysql:5.7.19
+        image: bitnami/mysql:latest
         environment:
             - ALLOW_EMPTY_PASSWORD=yes
             - MYSQL_USER=my_user
@@ -37,6 +37,3 @@ services:
             - PMA_HOST=mysql
         ports:
             - 5555:80
-    tool:
-        build: dockers/tool
-        tty: true
